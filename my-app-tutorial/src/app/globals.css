@@ -31,3 +31,10 @@ body {
     text-wrap: balance;
   }
 }
+
+#visor{
+  background-color: bisque;
+  height: 25%;
+  padding: 20px;
+  
+}

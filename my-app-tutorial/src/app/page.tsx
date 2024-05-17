@@ -2,6 +2,7 @@
 import React from 'react'
 import { increment, decrement } from '@/redux/features/counterSlice';
 import {useAppDispatch, useAppSelector}from '@/redux/hooks'
+import Monaco from './monaco';
 
 function Homepage() {
   const count = useAppSelector(state => state.counterReducer.value)
@@ -19,6 +20,8 @@ function Homepage() {
       <button onClick={()=>dispacth(decrement())}>
         Decrementar
       </button>
+      <br />
+      <Monaco />
     </div>
   )
 }
