@@ -7,7 +7,7 @@ const blog = () =>(
 
         <ul>
             {Object.entries(posts).map((value,index)=>{
-                return <li key={index}>{value[1].title}</li>
+                return (<li key={index}><Link href={`/blog/${value[0]}`}>{value[1].title}</Link></li>)
             })}
 
         </ul>

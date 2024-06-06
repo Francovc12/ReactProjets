@@ -1,5 +1,5 @@
 import {useRouter} from 'next/router'
-import posts from '../posts.json'
+import posts from '../../posts.json'
 
 const blog = () =>{
     const router = useRouter()
