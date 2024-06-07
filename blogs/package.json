@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next",
     "build": "next bulid",
-    "start": "next start"
+    "start": "next start",
+    "export": "next export"
   },
   "keywords": [],
   "author": "",
