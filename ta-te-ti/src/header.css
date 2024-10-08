@@ -1,0 +1,19 @@
+@keyframes logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+header{
+    border-bottom: 2px solid #61dafbaa;
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    justify-content: center;
+    img{
+        margin-right: 10px;
+        animation: logo-spin infinite 10s linear;
+    }
+}

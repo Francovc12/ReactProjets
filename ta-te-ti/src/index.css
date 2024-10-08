@@ -1,10 +1,10 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /*font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;*/
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
 }
 
 @media (prefers-color-scheme: light) {
@@ -15,5 +15,32 @@
 
   button {
     background-color: #f9f9f9;
+  }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+  }
+}
+
+#root{
+  display: grid;
+  grid-template-columns: minmax(100px, auto) minmax(400px,1000px);
+  grid-template-rows: 1fr minmax(300px,80vh);
+  gap: 1em;
+  grid-template-areas: 
+  "header header"
+  "aside main";
+  header{
+    grid-area: header;
+  }
+  .tateti{
+    grid-area: main;
+  }
+  aside{
+    grid-area: aside;
   }
 }

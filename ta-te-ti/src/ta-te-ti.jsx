@@ -2,7 +2,6 @@ import { useState } from 'react'
 import './tateti.css'
 
 export function Box({value, onBoxClick}){
-    //const[value, setValue] = useState(null);
     return (
         <button className='box'onClick={onBoxClick}>{value}</button>
     )
@@ -16,9 +15,9 @@ export default function Board(){
         }
         const nextbox = boxes.slice();
         if (xIsNext){
-            nextbox[i] = "X";
+            nextbox[i] = "✖️";
         }else{
-            nextbox[i] = 'O';
+            nextbox[i] = '⭕';
         }
         setBoxes(nextbox);
         setXIsNext(!xIsNext);
@@ -31,7 +30,7 @@ export default function Board(){
       status = "Siguiente jugador: " + (xIsNext ? "X" : "O");
     }
     return(
-        <>
+        <div className='tateti'style={{"display":"grid", "gridArea":"main"}}>
             <div className='status'>{status}</div>
             <div className="row">
                 <Box value={boxes[0]} onBoxClick={()=>handleClick(0)}/>
@@ -48,7 +47,7 @@ export default function Board(){
                 <Box value={boxes[7]} onBoxClick={()=>handleClick(7)}/>
                 <Box value={boxes[8]} onBoxClick={()=>handleClick(8)}/>
             </div>
-        </>
+        </div>
     )}
     function calculateWinner(boxes) {
         const lines = [
